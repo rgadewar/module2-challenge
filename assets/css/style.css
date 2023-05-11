@@ -1,0 +1,244 @@
+:root {
+  /* declare a variable with `--` syntax */
+  --dark: #13293d;
+  --bgcolor: lightgray;
+  --text_color: rgb(143, 227, 227)
+}
+
+* {
+  /* box-sizing: border-box; */
+  padding: 0;
+  margin: .50px;
+  /* font-size: 40px; */
+  font-family: Serriff;
+}
+
+body {
+  background-color: var(--bgcolor);
+  /* Turns this element into a flexbox */
+  display: flex;
+  flex-direction: column;
+  font-family: -apple-system, Calibri,  BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+  Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 1.75rem;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  padding: 20px;
+   /* Defines how to distribute the empty space between child elements */
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark);
+  color:var(--bgcolor);
+  padding: 5px 5px;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 4rem;
+  color:var(--text_color);
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+header section {
+  display: flex;
+  float: right;
+  align-items: center;
+}
+
+header section ul {
+  list-style-type: none;
+}
+
+header section ul li {
+  display: flex;
+  justify-content: space-between;
+  display: inline-block;
+  margin-left: 15px;
+  border-bottom: 2px solid var(--text_color);
+  font-size: 2.0rem;
+}
+
+a {
+  color: var(--text_color);
+  text-decoration: none;
+}
+
+/* p {
+  justify-content: normal;
+} */
+
+.logo {
+  height: 400px;
+  width: 100%;
+  margin-bottom: 40px;
+  background-image: url("../images/logo11.jpg");
+  background-size: cover;
+  background-position: center;
+} 
+
+.container {
+  width: 80%;
+  margin-left: 5%;
+  display: grid; 
+  grid-template-columns: 0.030fr 1fr; 
+  row-gap: 10px; 
+  height: 30%;
+  margin-bottom: 0.5%;
+}
+
+.float-child-right {
+  width: 100%;
+  float: left;
+  border: 2px solid black;
+  margin:0 auto;
+  border-top-style: none;
+  border-bottom-style: none;
+  border-right-style: none; 
+  padding-left: 20px;
+}  
+
+main {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+
+/* section {
+  flex: 0 0 100%; */
+  /* background-color:var(--bgcolor); */
+  /* padding: 20px; */
+/* }    */
+
+img {
+  background-color: #fff;
+  width: 100%;
+  padding: 5px;
+  height: 25%;
+  border: .5px solid black;
+}
+  
+.float-child-left{
+  border-top-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.grid-container-element img{
+  width:100%;
+  height: 100%
+ }
+
+.container li {
+  margin-right: 20px;
+  list-style-type: none;
+  display: flex;
+  display: inline-block;  
+  justify-content: space-between;   
+  font-size: 2.75rem;
+  line-height: 1.5;
+  text-shadow: 0 0 3px teal;
+}
+
+.grid-container-element { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-gap: 10px; 
+} 
+.grid-child-element { 
+  margin: 1px; 
+}
+
+.contactlinks a {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  color: var(--dark);
+}
+
+.contactlinks{
+  display: flex;
+  justify-content: center;  
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  background-color: var(--dark);
+  color: var(--text_color);
+}
+
+.brightness img:hover {
+  filter: brightness(50%);
+  opacity: 1.0; 
+  cursor: pointer; 
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+    display:flex;
+    flex-direction: column;
+  }
+  .float-child-left{
+    text-align: center;
+    margin-right: 10px;
+  }  
+  .float-child-right{
+    width: 100%;
+    float: left;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    /* border-top-style: none; */
+    border-bottom-style: none;
+    border-right-style: none; 
+    border-left-style: none; 
+    padding-top: 20px;
+  }
+  .contactlinks{
+    display: flex;
+    flex-direction: row;
+    /* display: inline-block; */
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 20px;
+  } 
+  
+  .container li {
+    margin-right: 20px;
+    /* float: left;  */
+    list-style-type: none;
+    display: flex;
+    justify-content: center; 
+    font-size: 2.75rem;
+    line-height: 1.5;
+    text-shadow: 0 0 3px teal;
+  }
+
+  header section ul li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 15px;
+    border-bottom: 2px solid var(--text_color);
+    font-size: 2.0rem;
+  }
+
+  .grid-container-element { 
+    grid-template-columns: 1fr;
+  }
+   }
